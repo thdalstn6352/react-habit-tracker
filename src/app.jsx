@@ -2,14 +2,13 @@ import './app.css';
 import Navbar from './components/navbar';
 import Habits from './components/habits';
 import { useState } from 'react/cjs/react.development';
-import { useCallback, useEffect } from 'react';
 
 
 function App() {
   const [id, setId] = useState(1);
   const [habits, setHabits] = useState([]);
 
-  const handleInput = useCallback((input) => {
+  const handleInput = (input) => {
 
     const newHabit = {
       id,
@@ -18,7 +17,7 @@ function App() {
     };
     setHabits([newHabit, ...habits]);
     setId((cur) => cur + 1);
-  })
+  }
 
   const handleIncrement = (habit) => {
     const newHabits = habits.map(item => {
