@@ -1,7 +1,7 @@
 import './app.css';
 import Navbar from './components/navbar';
 import Habits from './components/habits';
-import { useState } from 'react/cjs/react.development';
+import React, {useState} from "react";
 
 
 function App() {
