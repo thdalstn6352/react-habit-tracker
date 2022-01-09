@@ -1,13 +1,12 @@
 import './app.css';
 import Navbar from './components/navbar';
 import Habits from './components/habits';
-import React, {useState} from "react";
+import { useState } from 'react';
 
 
 function App() {
   const [id, setId] = useState(1);
   const [habits, setHabits] = useState([]);
-
   const handleInput = (input) => {
 
     const newHabit = {
